@@ -19,8 +19,8 @@ class HinhChuNhat {
 }
 public class Main {
     public static void main(String[] args) {
-        HinhChuNhat hcn1 = new HinhChuNhat(5, 3);
-        HinhChuNhat hcn2 = new HinhChuNhat(7, 2);
+        HinhChuNhat hcn1 = new HinhChuNhat(32, 36);
+        HinhChuNhat hcn2 = new HinhChuNhat(78, 872);
         hcn1.hienThiThongTin();
         hcn2.hienThiThongTin();
     }
@@ -47,8 +47,8 @@ class SinhVien {
 }
 public class Main {
     public static void main(String[] args) {
-        SinhVien sv1 = new SinhVien("SV001", "Nguyễn Văn A", 20);
-        SinhVien sv2 = new SinhVien("SV002", "Trần Thị B", 21);
+        SinhVien sv1 = new SinhVien("B24DCCC01", "Nguyễn Văn A", 20);
+        SinhVien sv2 = new SinhVien("B24DCCC02", "Trần Thị B", 19);
         sv1.hienThiThongTin();
         sv2.hienThiThongTin();        
         SinhVien.hienThiTongSinhVien();
@@ -69,17 +69,17 @@ class TaiKhoan {
     public void napTien(double soTien) {
         if (soTien > 0) {
             soDu += soTien;
-            System.out.println("Nạp " + soTien + " VND thành công.");
+            System.out.println("Nạp " + soTien + " $ thành công vào tài khoản");
         } else {
-            System.out.println("Số tiền nạp phải lớn hơn 0.");
+            System.out.println("Số tiền nạp không hợp lệ");
         }
     }
     public void rutTien(double soTien) {
         if (soTien > 0 && soTien <= soDu) {
             soDu -= soTien;
-            System.out.println("Rút " + soTien + " VND thành công.");
+            System.out.println("Rút " + soTien + " $ thành công");
         } else {
-            System.out.println("Số tiền rút không hợp lệ.");
+            System.out.println("Số tiền rút không hợp lệ");
         }
     }
     public double tinhLai() {
@@ -104,7 +104,7 @@ public class Main {
         tk2.rutTien(1000000);        
         tk1.hienThiThongTin();
         tk2.hienThiThongTin();
-        System.out.println("Lãi tháng của TK1: " + tk1.tinhLai() + " VND");    
+        System.out.println("Lãi tháng của TK1: " + tk1.tinhLai() + " $");    
         TaiKhoan.thayDoiLaiSuat(0.07);
         TaiKhoan.hienThiLaiSuat();
     }
